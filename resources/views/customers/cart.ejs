@@ -22,13 +22,13 @@
                 <%for(let biryani_item of Object.values(session.cart.items)){%>
 
                 <div class="flex items-center my-6 ">
-                    <img class='h-40 w-40 mt-4 rounded-full'src="/img/<%=biryani_item.item.image%>" alt="biryani-item">
+                    <img class='h-20 lg:h-40 w-20 lg:w-40 mt-4 rounded-full'src="/img/<%=biryani_item.item.image%>" alt="biryani-item">
                     <div class='ml-6 flex-1'>
                         <h2 class="font-bold text-xl py-4 pr-2 "><%=biryani_item.item.name%></h2>
                         <span class="lowercase text-gray-500 text-lg"><%=biryani_item.item.plate%></span>
                     </div>
-                    <span class="flex-1 ml-3 pb-6"><%=biryani_item.qty%></span>
-                    <span class="text-lg font-bold"><%=biryani_item.item.price * biryani_item.qty%></span>
+                    <span class="flex-1 ml-3 mr-2 lg:ml-3 pb-6"><%=biryani_item.qty%></span>
+                    <span class="text-lg mb-3 font-bold">₹<%=biryani_item.item.price * biryani_item.qty%></span>
                 </div>
                 <%}%>
             </div>
@@ -36,7 +36,7 @@
                 <div class="text-right py-3">
                     <div>
                         <span class="font-bold text-lg">Total amount:</h1>
-                        <span class="amount font-bold text-lg pl-3 "><%=session.cart.totalAmount%></span>
+                        <span class="amount font-bold text-lg pl-3 ">₹<%=session.cart.totalAmount%></span>
                     </div>
 
                     <%if(user){%>

@@ -25,12 +25,11 @@
     <!-- navbar -->
     <nav class="container mx-auto flex items-center justify-between py-4">
         <div>
-           <a href="/"> <img src="/img/logo.jpeg" class='rounded-full logo'alt="logo"> 
+           <a href="/"> <img src="/img/logo.png" class='rounded-full logo'alt="logo"> 
         </div>
         <div >
             <ul class="flex">
                 <li class='ml-4'><a href="/">Menu</a></li>
-                <li class='ml-4'><a href="#">Offers</a></li>
                 <%if(user){%>
                     <li class='ml-4'>
                         <form id='logout' action="/logout" method="post">
@@ -46,7 +45,8 @@
                     <span id='cartCounter'class=" font-bold text-white pr-2">
                         <%=session.cart?session.cart.totalQty:''%>
                     </span>
-                    <img src="/img/cart.png" alt="cart" ></a>
+                    <img src="/img/cart.png" alt="cart" style="
+                    text-decoration: none;"></a>
                 </li>
             </ul>
         </div>

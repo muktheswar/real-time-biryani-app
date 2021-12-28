@@ -453,3 +453,9 @@ section.status {
     font-size: 34px;
   }
 }
+@media (max-width: 812px) {
+  nav .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+}
